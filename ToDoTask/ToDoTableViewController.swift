@@ -26,16 +26,19 @@ class ToDoTableViewController: UITableViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
             
             let title = alert.textFields?[0] as! UITextField
-            self.names.append(title.text!)
+            self.names.append(namesClass)
             self.tableView.reloadData()
         }))
         
     
         
+        
          self.present(alert, animated: true, completion: nil)
     }
     
-    var names = ["A" , "M"]
+    var names = [namesClass]()
+    
+    
     
     override func viewDidLoad() {
         
